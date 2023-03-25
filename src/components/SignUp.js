@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import axios from 'axios'
+import vehicleImg from '../assets/pexels-kamshotthat-3457780.jpg'
 
 function SignUp() {
 
@@ -54,23 +55,28 @@ function SignUp() {
         })
     }
 
-    return (
-      <Fragment>
-            <div>SignUp</div>
-            <label>First Name</label>
-            <input type="text" id="textFirstName" placeholder="Enter first name" onChange={(e) => handleFirstNameChange(e.target.value)} /><br/>
-            <label>Last Name</label>
-            <input type="text" id="textLastName" placeholder="Enter first last name" onChange={(e) => handleLastNameChange(e.target.value)} /><br/>
-            <label>Email</label>
-            <input type="text" id="textEmail" placeholder="Enter email" onChange={(e) => handleEmailChange(e.target.value)} /><br/>
-            <label>Phone</label>
-            <input type="text" id="textPhone" placeholder="Enter phone number" onChange={(e) => handlePhoneNumberChange(e.target.value)} /><br/>
-            <label>Password</label>
-            <input type="text" id="textPassword" placeholder="Enter password" onChange={(e) => handlePasswordChange(e.target.value)} /><br/>
-            <label>Confirm Password</label>
-            <input type="text" id="textConfirmPassword" placeholder="Enter password" onChange={(e) => handleConfirmPasswordChange(e.target.value)} /><br/><br/>
-            <button onClick={() => handleRegister()}>Register</button>
-      </Fragment>
+    return (        
+        <section>
+        <div className="register">
+            <div className="col-1">
+                <h2>Welcome to VPARK</h2>
+                <span>register and enjoy the service</span>
+
+                <div id='form' className='flex flex-col'>
+                    <input type="text" id="textFirstName" placeholder="first name" onChange={(e) => handleFirstNameChange(e.target.value)} />
+                    <input type="text" id="textLastName" placeholder="last name" onChange={(e) => handleLastNameChange(e.target.value)} />
+                    <input type="text" id="textEmail" placeholder="email" onChange={(e) => handleEmailChange(e.target.value)} />
+                    <input type="text" id="textPhone" placeholder="phone number" onChange={(e) => handlePhoneNumberChange(e.target.value)} />
+                    <input type="text" id="textPassword" placeholder="password" onChange={(e) => handlePasswordChange(e.target.value)} />
+                    <input type="text" id="textConfirmPassword" placeholder="confirm password" onChange={(e) => handleConfirmPasswordChange(e.target.value)} />                                
+                    <button className="btn" onClick={() => handleRegister()}>Register</button>
+                </div>
+            </div>
+            <div className="col-2">
+                <img src={vehicleImg} alt="" />
+            </div>
+        </div>
+    </section>
     
   )
 }

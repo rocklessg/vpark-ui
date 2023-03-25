@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import vehicleImg from '../assets/pexels-kamshotthat-3457780.jpg'
 
@@ -76,8 +76,7 @@ function SignUp() {
                 <img src={vehicleImg} alt="" />
             </div>
         </div>
-    </section>
-    
+    </section>    
   )
 }
 

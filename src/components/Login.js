@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
+import vehicleImg from '../assets/horizontal-picture-car-parking-underground-garage-interior-with-neon-lights-autocars-parked-buildings-urban-constructions-space-transportation-vehicle-night-city-concept.jpg'
 
 function Login() {
 
@@ -38,16 +39,27 @@ function Login() {
     }
 
   return (
-    <Fragment>
-      <div>Login</div>
-      <label>Email</label>
-            <input type="text" id="textEmail" placeholder="Enter email" onChange={(e) => handleEmailChange(e.target.value)} /><br/>
-            <label>Password</label>
-            <input type="text" id="textPassword" placeholder="Enter password" onChange={(e) => handlePasswordChange(e.target.value)} /><br/>
-            <label>Remember me?</label>
-            <input type="checkBox" id="textRememberMe" onChange={(e) => handleRememberMeChange(e.target.value)} /><br/><br/>
-            <button onClick={() => handleLogin()}>Login</button>
-    </Fragment>
+    <section>
+        <div className="register">
+            <div className="col-1">
+                <h2>Sign in</h2>
+                <span>Login to your account</span>
+
+            <div id='form' className='flex flex-col'>
+            <input type="text" id="textEmail" placeholder="Enter email" onChange={(e) => handleEmailChange(e.target.value)} />
+            <input type="text" id="textPassword" placeholder="Enter password" onChange={(e) => handlePasswordChange(e.target.value)} />
+            <div className='rememberMe'>            
+                <input type="checkBox" id="textRememberMe" onChange={(e) => handleRememberMeChange(e.target.value)} /> 
+                <label>Remember Me?</label> 
+            </div><br />
+            <button className="btn" onClick={() => handleLogin()}>Login</button>
+                </div>
+            </div>
+            <div className="col-2">
+                <img src={vehicleImg} alt="" />
+            </div>
+        </div>
+    </section>
   )
 }
 

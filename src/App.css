@@ -84,6 +84,12 @@ body {
   display: none;
 }
 
+.rememberMe {
+  display: flex;
+  column-gap: .3rem;
+  color: #060d14;
+}
+
 @media screen and (min-width: 860px) {
   .register .col-2 img {
     display: initial;

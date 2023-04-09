@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import vehicleImg from '../assets/pexels-kamshotthat-3457780.jpg'
+import { useNavigate } from 'react-router-dom'
 
 function SignUp() {
 
@@ -55,6 +56,8 @@ function SignUp() {
         })
     }
 
+    let navigate = useNavigate()
+
     return (        
         <section>
         <div className="register">
@@ -68,8 +71,9 @@ function SignUp() {
                     <input type="text" id="textEmail" placeholder="email" onChange={(e) => handleEmailChange(e.target.value)} />
                     <input type="text" id="textPhone" placeholder="phone number" onChange={(e) => handlePhoneNumberChange(e.target.value)} />
                     <input type="text" id="textPassword" placeholder="password" onChange={(e) => handlePasswordChange(e.target.value)} />
-                    <input type="text" id="textConfirmPassword" placeholder="confirm password" onChange={(e) => handleConfirmPasswordChange(e.target.value)} />                                
-                    <button className="btn" onClick={() => handleRegister()}>Register</button>
+                    <input type="text" id="textConfirmPassword" placeholder="confirm password" onChange={(e) => handleConfirmPasswordChange(e.target.value)} />
+                    <button className="btn" onClick={() => handleRegister()}>Register</button>    
+                    {/* <a href={() => {navigate('/login')}}><button className="btn" onClick={() => handleRegister()}>Register</button></a> */}
                 </div>
             </div>
             <div className="col-2">

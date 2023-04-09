@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import vehicleImg from '../assets/horizontal-picture-car-parking-underground-garage-interior-with-neon-lights-autocars-parked-buildings-urban-constructions-space-transportation-vehicle-night-city-concept.jpg'
+import parkingSpaceImg from '../assets/horizontal-picture-car-parking-underground-garage-interior-with-neon-lights-autocars-parked-buildings-urban-constructions-space-transportation-vehicle-night-city-concept.jpg'
 
 function Login() {
 
@@ -56,7 +56,7 @@ function Login() {
                 </div>
             </div>
             <div className="col-2">
-                <img src={vehicleImg} alt="" />
+                <img src={parkingSpaceImg} alt="" />
             </div>
         </div>
     </section>
